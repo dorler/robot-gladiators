@@ -1,22 +1,24 @@
 var playerName = window.prompt("What is your robot's name? ");
 var playerHealth = 100;
 var playerAttack = 10;
-var playerMoney = 10
-
-//Note to remember to console log.
-console.log(playerName, playerAttack, playerHealth, playerMoney);
+var playerMoney = 10;
 
 
-var enemyName = "Roberto" ;
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50 ;
 var enemyAttack = 12 ;
 
 // console
-console.log(enemyName, enemyHealth, enemyAttack);
+
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+
+//for loop or 
+
 
 //Fight Function
-
-var fight = function() {
+var fight = function(enemyName) {
     window.alert ("Welcome to Robot Gladiators!");
 // Option to fight
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -73,6 +75,6 @@ var fight = function() {
     };
 };
 
-/* Bottom of page  to execute the function*/
-
- fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
