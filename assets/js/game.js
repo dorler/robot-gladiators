@@ -68,7 +68,8 @@ playerInfo.reset();
 
     //Let Player know which round we are in 
     if (playerInfo.health > 0) {
-        window.alert("Welcome to Robot Gladiators! Round " + (i + 1) );
+        window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
+    
     
     var pickedEnemyObj = enemyInfo[i];
      
@@ -146,11 +147,21 @@ switch (shopOptionPrompt) {
     return value;
   };
  
+  var getPlayerName = function() {
+    var name = "";
+    while (name === "" || name === null) {
+        name = prompt("What is your robot's name?");
+      }
+    console.log("Your robot's name is " + name);
+  return name;
+};
+
   var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
+    
     reset: function() {
       this.health = 100;
       this.money = 10;
